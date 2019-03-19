@@ -106,10 +106,8 @@ contract CryptoBallers is ERC721 {
          }
 
        }else {
-        ballers[_ballerId].level = ballers[_ballerId].level.sub(1);
-        ballers[_opponentId].level = ballers[_opponentId].level.add(1);
-        ballers[_ballerId].winCount = ballers[_ballerId].winCount.sub(1);
-        ballers[_opponentId].lossCount = ballers[_opponentId].lossCount.add(1);
+        ballers[_ballerId].lossCount = ballers[_ballerId].lossCount.add(1);
+        ballers[_opponentId].winCount = ballers[_opponentId].winCount.add(1);
        }
     }
 
